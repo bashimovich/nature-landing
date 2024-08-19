@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-30 14:33+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: config/settings.py:125
+msgid "English"
+msgstr "Английский"
+
+#: config/settings.py:126
+msgid "Turkmen"
+msgstr "Туркменский"
+
+#: nature/templates/contact.html:13 nature/templates/home.html:629
+msgid "CONTACT"
+msgstr "Контакты"
+
+#: nature/templates/contact.html:18 nature/templates/home.html:634
+msgid "GET IN TOUCH"
+msgstr "Контакты"
+
+#: nature/templates/contact.html:22 nature/templates/home.html:638
+msgid "Turkmenistan/Ashgabat"
+msgstr "Туркменистан/Ашхабат"
+
+#: nature/templates/contact.html:36 nature/templates/home.html:652
+msgid "* Your Name"
+msgstr "Имя"
+
+#: nature/templates/contact.html:37 nature/templates/home.html:653
+msgid "* Your Email"
+msgstr "э-почта"
+
+#: nature/templates/contact.html:38 nature/templates/home.html:654
+msgid "* Your Message"
+msgstr "Собшение"
+
+#: nature/templates/contact.html:39 nature/templates/home.html:655
+msgid "SEND"
+msgstr "Отправить"
+
+#: nature/templates/home.html:128
+msgid "Latest News"
+msgstr "Новости"
+
+#: nature/templates/home.html:161 nature/templates/layouts/main.html:92
+msgid "Historical Monuments"
+msgstr "Монументы"
+
+#: nature/templates/home.html:345
+msgid "TOP"
+msgstr "ТОП"
+
+#: nature/templates/home.html:391 nature/templates/layouts/main.html:103
+msgid "Gallery"
+msgstr "Галлерея"
+
+#: nature/templates/layouts/main.html:34
+msgid "TURKMEN NATURE"
+msgstr "ТУРКМЕНСКАЯ ПРИРОДА "
+
+#: nature/templates/layouts/main.html:91
+msgid "Home"
+msgstr "Домой"
+
+#: nature/templates/layouts/main.html:95
+msgid "Mary"
+msgstr "Мары"
+
+#: nature/templates/layouts/main.html:96
+msgid "Dashoguz"
+msgstr "Дашогуз"
+
+#: nature/templates/layouts/main.html:97
+msgid "Balkan"
+msgstr "Балкан"
+
+#: nature/templates/layouts/main.html:98
+msgid "Lebap"
+msgstr "Лебап"
+
+#: nature/templates/layouts/main.html:99
+msgid "Ahal"
+msgstr "Ахал"
+
+#: nature/templates/layouts/main.html:110
+msgid "Reserves"
+msgstr "Заповедник"
+
+#: nature/templates/layouts/main.html:111
+msgid "Natural Resouces"
+msgstr "Ресурсы"
+
+#: nature/templates/layouts/main.html:112
+msgid "Contact"
+msgstr "Контакты"
+
+#: nature/templates/layouts/main.html:118
+msgid "Search"
+msgstr "Поиск"
+
+#: nature/templates/layouts/main.html:140
+msgid "Copyright &copy; 2023. All rights reserved."
+msgstr "Copyright &copy; 2023. Все права защишены"

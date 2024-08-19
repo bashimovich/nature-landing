@@ -1,0 +1,49 @@
+{% extends 'layouts/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block 'content' %}
+<main role="main">
+       
+        <!-- CONTACT SECTION -->
+
+        <section class="contact">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <h2 class="text-primary">{% trans 'CONTACT' %}</h2>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-content-detail">
+                        <h3>{% trans 'GET IN TOUCH' %}</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt fa-3x"></i>
+                                <p>{% trans 'Turkmenistan/Ashgabat' %}</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope fa-3x"></i>
+                                <p>turkmen.nature.com</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone fa-3x"></i>
+                                <p>+99362123123</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-content-form">
+                        <form>
+                            <input type="text" placeholder="{% trans '* Your Name' %}" required>
+                            <input type="email" placeholder="{% trans '* Your Email' %}" required>
+                            <textarea placeholder="{% trans '* Your Message' %}" rows="5" required></textarea>
+                            <input type="submit" value="{% trans 'SEND' %}">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

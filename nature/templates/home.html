@@ -1,0 +1,664 @@
+{% extends 'layouts/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block 'content' %}
+<main role="main">
+        <!--Main Slider-->
+        <div class="main-slider owl-carousel owl-theme">
+            <!--Single Slide-->
+            <div class="single-slide" data-dot="<span>01.</span>">
+
+                <picture>
+                    <source srcset="{{ carusel_01.image.url }}" media="(max-width: 768px)">
+                    <img srcset="{{ carusel_01.image.url }}">
+                </picture>
+
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h2>{{ carusel_01.title }}</h2>
+                            <p>{{ carusel_01.description|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h2>{{ carusel_01.title_in_turkmen }}</h2>
+                            <p>{{ carusel_01.description_in_turkmen|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h2>{{ carusel_01.title_in_russian }}</h2>
+                            <p>{{ carusel_01.description_in_russian|truncatechars:295 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Single Slide-->
+            <div class="single-slide" data-dot="<span>02.</span>">
+                <img src="{{ carusel_02.image.url }}">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h2>{{ carusel_02.title }}</h2>
+                            <p>{{ carusel_02.description|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h2>{{ carusel_02.title_in_turkmen }}</h2>
+                            <p>{{ carusel_02.description_in_turkmen|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h2>{{ carusel_02.title_in_russian }}</h2>
+                            <p>{{ carusel_02.description_in_russian|truncatechars:295 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Single Slide-->
+            <div class="single-slide" data-dot="<span>03.</span>">
+                <img src="{{ carusel_03.image.url }}">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h2>{{ carusel_03.title }}</h2>
+                            <p>{{ carusel_03.description|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h2>{{ carusel_03.title_in_turkmen }}</h2>
+                            <p>{{ carusel_03.description_in_turkmen|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h2>{{ carusel_03.title_in_russian }}</h2>
+                            <p>{{ carusel_03.description_in_russian|truncatechars:295 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slide" data-dot="<span>04.</span>">
+                <img src="{{ carusel_04.image.url }}">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h2>{{ carusel_04.title }}</h2>
+                            <p>{{ carusel_04.description|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h2>{{ carusel_04.title_in_turkmen }}</h2>
+                            <p>{{ carusel_04.description_in_turkmen|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h2>{{ carusel_04.title_in_russian }}</h2>
+                            <p>{{ carusel_04.description_in_russian|truncatechars:295 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slide" data-dot="<span>05.</span>">
+                <img src="{{ carusel_05.image.url }}">
+                <div class="slide-overlay">
+                    <div class="container">
+                        <div class="slide-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h2>{{ carusel_05.title }}</h2>
+                            <p>{{ carusel_05.description|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h2>{{ carusel_05.title_in_turkmen }}</h2>
+                            <p>{{ carusel_05.description_in_turkmen|truncatechars:295 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h2>{{ carusel_05.title_in_russian }}</h2>
+                            <p>{{ carusel_05.description_in_russian|truncatechars:295 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LATEST NEWS  -->
+
+        <div class="latest-news">
+            <div class="latest-news-title">
+                <h4>{% trans 'Latest News' %}</h4>
+            </div>
+            <div class="latest-news-content">
+                <marquee>
+                    <div class="news-ticker">
+                        {% for item in news %}
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <p> <span class="badge">{{ item.category }}</span>{{ item.news }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <p> <span class="badge">{{ item.category_in_turkmen }}</span>{{ item.news_in_turkmen }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <p> <span class="badge">{{ item.category_in_russian }}</span>{{ item.news_in_russian }}</p>
+                            {% endif %}
+                        {% endfor %}
+
+                        <!-- <p> <span class="badge badge-tech">TECH</span>Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit.</p>
+                        <p> <span class="badge badge-game">GAME</span>Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit.</p> -->
+                    </div>
+                </marquee>
+            </div>
+        </div>
+
+        <!-- RECENT GAMES  -->
+
+        <section class="recent-games">
+
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <h2 class="text-blue">{% trans 'Historical Monuments' %}</h2>
+                </div>
+
+                <div class="recent-games-content">
+
+                    <!-- SINGLE GAME FEATURED  -->
+                    <div class="recent-game recent-game-1 recent-game-featured">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_01.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            <h3 class="game-title"><a href="#">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                                {{ monument_01.title }}
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                                {{ monument_01.title_in_turkmen }}
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                                {{ monument_01.title_in_russian }}
+                            {% endif %}
+                            </a></h3>
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_01.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_01.views }} views</a>
+                            </div> -->
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <p>{{ monument_01.description|truncatechars:290 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <p>{{ monument_01.description_in_turkmen|truncatechars:290 }}</p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <p>{{ monument_01.description_in_russian|truncatechars:290 }}</p>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                    <!-- SINGLE GAME-->
+                    <div class="recent-game recent-game-2">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_02.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h3 class="game-title">{{ monument_02.title|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h3 class="game-title">{{ monument_02.title_in_turkmen|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h3 class="game-title">{{ monument_02.title_in_russian|truncatechars:90 }}</h3>
+                            {% endif %}
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_02.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_02.views}} views</a>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- SINGLE GAME-->
+                    <div class="recent-game recent-game-3">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_03.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h3 class="game-title">{{ monument_03.title|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h3 class="game-title">{{ monument_03.title_in_turkmen|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h3 class="game-title">{{ monument_03.title_in_russian|truncatechars:90 }}</h3>
+                            {% endif %}
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_03.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_03.views }} views</a>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- SINGLE GAME-->
+                    <div class="recent-game recent-game-4">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_04.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h3 class="game-title">{{ monument_04.title|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h3 class="game-title">{{ monument_04.title_in_turkmen|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h3 class="game-title">{{ monument_04.title_in_russian|truncatechars:90 }}</h3>
+                            {% endif %}
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_04.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_04.views }} views</a>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- SINGLE GAME-->
+                    <div class="recent-game recent-game-5">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_05.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h3 class="game-title">{{ monument_05.title|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h3 class="game-title">{{ monument_05.title_in_turkmen|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h3 class="game-title">{{ monument_05.title_in_russian|truncatechars:90 }}</h3>
+                            {% endif %}
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_05.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_05.views }} views</a>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- SINGLE GAME-->
+                    <div class="recent-game recent-game-6">
+
+                        <div class="recent-game-thumbnail">
+                            <!-- <div class="rating">8.7</div> -->
+                            <img src="{{ monument_06.image.url }}">
+                        </div>
+
+                        <div class="recent-game-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <h3 class="game-title">{{ monument_06.title|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <h3 class="game-title">{{ monument_06.title_in_turkmen|truncatechars:90 }}</h3>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <h3 class="game-title">{{ monument_06.title_in_russian|truncatechars:90 }}</h3>
+                            {% endif %}
+                            <!-- <div class="game-meta">
+                                <a href="#" class="game-date">{{ monument_06.created_at }}</a>
+                                <a href="#" class="game-comment">{{ monument_06.views }} views</a>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LATEST REVIEW -->
+        <section class="last-reviewed">
+            <div class="last-reviewed-detail">
+                <div class="review">
+                    <h2 class="review-title">{% trans 'TOP' %}</h2>
+                    <!-- <p class="review-tags">Adventure | Action</p> -->
+                    {% if request.session.language == "en" or request.session.language == none %}
+                    <p class="review-text">{{ top.title }}</p>
+                    <p class="review-text">{{ top.description }}</p>
+                    {% endif %}
+                    {% if request.session.language == "tm" %}
+                    <p class="review-text">{{ top.title_in_turkmen }}</p>
+                    <p class="review-text">{{ top.description_in_turkmen }}</p>
+                    {% endif %}
+                    {% if request.session.language == "ru" %}
+                    <p class="review-text">{{ top.title_in_russian }}</p>
+                    <p class="review-text">{{ top.description_in_russian }}</p>
+                    {% endif %}
+                    <div class="review-user">
+                        <!-- <img src="{% static 'img/user.jpg' %}" alt="User">
+                        <div class="review-user-detail">
+                            <p class="review-user-name">John Doe</p>
+                            <p class="review-user-date">July 12, 2020</p>
+                        </div> -->
+                        <!-- <div class="review-user-platform">
+                            <span class="fab fa-android fa-3x"></span>
+                            <span class="fab fa-apple fa-3x"></span>
+                            <span class="fab fa-windows fa-3x"></span>
+                        </div> -->
+                        <!-- <div class="review-user-rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="last-reviewed-image">
+
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+
+        <section class="gallery">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <h2 class="text-blue">{% trans 'Gallery' %}</h2>
+                </div>
+
+                <div class="masonary">
+                    <div class="masonary-item masonary-item-1">
+                        <img src="{{ gallery_01.image.url }}" alt="nature 2" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_01.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_01.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_01.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-2">
+                        <img src="{{ gallery_02.image.url }}" alt="nature 3" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_02.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_02.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_02.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-3">
+                        <img src="{{ gallery_03.image.url }}" alt="nature 3" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_03.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_03.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_03.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-4">
+                        <img src="{{ gallery_04.image.url }}" alt="nature 4" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_04.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_04.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_04.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-5">
+                        <img src="{{ gallery_05.image.url }}" alt="nature 5" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_05.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_05.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_05.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-6">
+                        <img src="{{ gallery_06.image.url }}" alt="nature 6" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_06.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_06.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_06.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-7">
+                        <img src="{{ gallery_07.image.url }}" alt="nature 7" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_07.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_07.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_07.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="masonary-item masonary-item-8">
+                        <img src="{{ gallery_08.image.url }}" alt="nature 8" class="masonary-image">
+                        <div class="middle">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <div class="text">{{ gallery_08.name }}</div>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <div class="text">{{ gallery_08.name_in_turkmen }}</div>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <div class="text">{{ gallery_08.name_in_russian }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOWCASE SECTION -->
+
+        <section class="showcase">
+            <div class="showcase-content">
+                {% for video in videos %}
+                    
+                <div class="showcase-item">
+                    <div class="item-image">
+                        <img src="{{ video.image.url }}" alt="nature 5">
+                    </div>
+                    <div class="item-content">
+                        {% if request.session.language == "en" or request.session.language == none %}
+                        <h3>{{ video.title }}</h3>
+                        <a href="{{ video.url }}"><i class="far fa-play-circle"></i></a>
+                        <p><em>{{ video.description }}</em></p>
+                        {% endif %}
+                        {% if request.session.language == "tm" %}
+                        <h3>{{ video.title_in_turkmen }}</h3>
+                        <a href="{{ video.url }}"><i class="far fa-play-circle"></i></a>
+                        <p><em>{{ video.description_in_turkmen }}</em></p>
+                        {% endif %}
+                        {% if request.session.language == "ru" %}
+                        <h3>{{ video.title_in_russian }}</h3>
+                        <a href="{{ video.url }}"><i class="far fa-play-circle"></i></a>
+                        <p><em>{{ video.description_in_russian }}</em></p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+
+        <!-- {% comment %} <section class="team">
+
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2 class="text-blue">{% trans 'THE TEAM' %}</h2>
+                </div>
+
+                <div class="team-members">
+
+                    <div class="team-member">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="{% static 'img/team1.jpg' %}" alt="Team Member 1">
+                                    <h4>Watjik</h4>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>FOUNDER</p>
+                                        <a href="#"><i class="fab fa-twitter-square fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-linkedin fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-facebook-square fa-3x m-1"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ -->
+                    <!-- <div class="team-member">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="{% static 'img/team2.jpg' %}" alt="Team Member 1">
+                                    <h4>Angel</h4>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>DESIGNER</p>
+                                        <a href="#"><i class="fab fa-twitter-square fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-linkedin fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-facebook-square fa-3x m-1"></i> </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="{% static 'img/team3.jpg' %}" alt="Team Member 1">
+                                    <h4>Garmat</h4>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card-back-content">
+                                        <p>DEVELOPER</p>
+                                        <a href="#"><i class="fab fa-twitter-square fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-linkedin fa-3x m-1"></i> </a>
+                                        <a href="#"><i class="fab fa-facebook-square fa-3x m-1"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+ -->
+
+        <!-- </section> {% endcomment %} -->
+
+        <!-- CONTACT SECTION -->
+
+        <section class="contact">
+            <div class="container">
+
+                <div class="section-title text-center">
+                    <h2 class="text-primary">{% trans 'CONTACT' %}</h2>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-content-detail">
+                        <h3>{% trans 'GET IN TOUCH' %}</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt fa-3x"></i>
+                                <p>{% trans 'Turkmenistan/Ashgabat' %}</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope fa-3x"></i>
+                                <p>turkmen.nature.com</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone fa-3x"></i>
+                                <p>+99362123123</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-content-form">
+                        <form>
+                            <input type="text" placeholder="{% trans '* Your Name' %}" required>
+                            <input type="email" placeholder="{% trans '* Your Email' %}" required>
+                            <textarea placeholder="{% trans '* Your Message' %}" rows="5" required></textarea>
+                            <input type="submit" value="{% trans 'SEND' %}">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

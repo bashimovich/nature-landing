@@ -1,0 +1,62 @@
+{% extends 'layouts/main.html' %}
+{% load static %}
+{% block 'content' %}
+<main role="main">
+        <section class="gallery">
+            <div class="container">
+               <div class="single">
+                  <div class="post">
+
+                    {% if request.session.language == "en" or request.session.language == none %}
+                      <h4 class="single-post-title">{{ post.title }}</h4>
+                    {% endif %}
+                    {% if request.session.language == "tm" %}
+                      <h4 class="single-post-title">{{ post.title_in_turkmen }}</h4>
+                    {% endif %}
+                      <img src="{{ post.image.url }}" alt="">
+                      <div class="content">
+
+                        {% if request.session.language == "en" or request.session.language == none %}
+                        <p>{{ post.content|safe }}</p>
+                        {% endif %}
+                        {% if request.session.language == "tm" %}
+                        <p>{{ post.content_in_turkmen|safe }}</p>
+                        {% endif %}
+                    </div>
+                      <div class="post-footer">
+                          <p><i class="fas fa-clock"></i>{{ post.created_at }}</p>
+                          <p><i class="fas fa-eye"></i>{{ post.views }}</p>
+                      </div>
+                  </div> 
+                  <div class="same-posts">
+                      <p class="recommended-posts">Recommended Posts</p>
+                      {% for rec in recommended_posts %}
+                      <div class="same-posts-single">
+                          <div class="same-posts-img">
+                            <img src="{{ rec.image.url }}" alt="">
+                          </div>
+                          <div class="same-posts-content">
+                            {% if request.session.language == "en" or request.session.language == none %}
+                            <p><a href="{% url 'single' rec.id %}">{{ rec.title|truncatechars:30 }}</a></p>
+                            {% endif %}
+                            {% if request.session.language == "tm" %}
+                            <p><a href="{% url 'single' rec.id %}">{{ rec.title_in_turkmen|truncatechars:30 }}</a></p>
+                            {% endif %}
+                            {% if request.session.language == "ru" %}
+                            <p><a href="{% url 'single' rec.id %}">{{ rec.title_in_russian|truncatechars:30 }}</a></p>
+                            {% endif %}
+                            <div>
+                                <p><i class="fa fa-clock"></i>{{ rec.created_at }}</p>
+                                <p><i class="fa fa-eye"></i>{{ rec.views }}</p>
+                            </div>
+                          </div>
+                        
+                      </div>
+                      {% endfor %}
+                  </div>
+               </div> 
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

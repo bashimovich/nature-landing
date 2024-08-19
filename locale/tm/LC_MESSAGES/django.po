@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-30 14:33+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config/settings.py:125
+msgid "English"
+msgstr "Iňlisçe"
+
+#: config/settings.py:126
+msgid "Turkmen"
+msgstr "Türkmençe"
+
+#: nature/templates/contact.html:13 nature/templates/home.html:629
+msgid "CONTACT"
+msgstr "Habarlaş"
+
+#: nature/templates/contact.html:18 nature/templates/home.html:634
+msgid "GET IN TOUCH"
+msgstr "Habarlaş"
+
+#: nature/templates/contact.html:22 nature/templates/home.html:638
+msgid "Turkmenistan/Ashgabat"
+msgstr "Türkmenistan/Aşgabat"
+
+#: nature/templates/contact.html:36 nature/templates/home.html:652
+msgid "* Your Name"
+msgstr "Adyňyz"
+
+#: nature/templates/contact.html:37 nature/templates/home.html:653
+msgid "* Your Email"
+msgstr "eMailiňiz"
+
+#: nature/templates/contact.html:38 nature/templates/home.html:654
+msgid "* Your Message"
+msgstr "Habaryňyz"
+
+#: nature/templates/contact.html:39 nature/templates/home.html:655
+msgid "SEND"
+msgstr "Ýolla"
+
+#: nature/templates/home.html:128
+msgid "Latest News"
+msgstr "Soňky Täzelikler"
+
+#: nature/templates/home.html:161 nature/templates/layouts/main.html:92
+msgid "Historical Monuments"
+msgstr "Taryhy Ýadygärlikler"
+
+#: nature/templates/home.html:345
+msgid "TOP"
+msgstr "TOP"
+
+#: nature/templates/home.html:391 nature/templates/layouts/main.html:103
+msgid "Gallery"
+msgstr "Galareýa"
+
+#: nature/templates/layouts/main.html:34
+msgid "TURKMEN NATURE"
+msgstr "TÜRKMEN TEBIGATY"
+
+#: nature/templates/layouts/main.html:91
+msgid "Home"
+msgstr "Öýe"
+
+#: nature/templates/layouts/main.html:95
+msgid "Mary"
+msgstr "Mary"
+
+#: nature/templates/layouts/main.html:96
+msgid "Dashoguz"
+msgstr "Daşoguz"
+
+#: nature/templates/layouts/main.html:97
+msgid "Balkan"
+msgstr "Balkan"
+
+#: nature/templates/layouts/main.html:98
+msgid "Lebap"
+msgstr "Lebap"
+
+#: nature/templates/layouts/main.html:99
+msgid "Ahal"
+msgstr "Ahal"
+
+#: nature/templates/layouts/main.html:110
+msgid "Reserves"
+msgstr "Goraghana"
+
+#: nature/templates/layouts/main.html:111
+msgid "Natural Resouces"
+msgstr "Tebigy Baýlyklar"
+
+#: nature/templates/layouts/main.html:112
+msgid "Contact"
+msgstr "Habarlaşmak"
+
+#: nature/templates/layouts/main.html:118
+msgid "Search"
+msgstr "Gözleg"
+
+#: nature/templates/layouts/main.html:140
+msgid "Copyright &copy; 2023. All rights reserved."
+msgstr "Copyright &copy; 2023. Ähli Hukuklar Goralan."
